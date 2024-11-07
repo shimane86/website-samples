@@ -35,12 +35,30 @@ h1 {
   margin-bottom: 1rem;
   font-weight: bold;
 }
-
 h2 {
   font-size: 1.5rem;
   color: #4caf50;
   margin-bottom: 0.5rem;
 }
+
+/* スマホ向けの設定（幅768px以下の場合に画像を非表示にする） */
+@media (max-width: 768px) {
+  .container {
+    background-image: none; /* 背景画像を非表示 */
+  }
+  h1 {
+    font-size: 2.0rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1.0rem;
+    color: #4caf50;
+    margin-bottom: 0.5rem;
+  }
+}
+
 
 .details, .program {
   margin-bottom: 1rem;
