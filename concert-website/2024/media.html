@@ -6,12 +6,19 @@
   <title>写真・動画</title>
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/carousel.css">
+  <link rel="stylesheet" href="assets/video.css">
   <!-- Font Awesomeのアイコンを使用 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>写真・動画</h1>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="banner">
+      <img src="assets/images/banner.png" alt="バナー" class="banner-img">
+    </div>
+    <div class="menu">
+      <span class="menu-icon">☰</span> <!-- ハンバーガーメニューアイコン -->
+    </div>
   </header>
   <main>
     <section class="media-gallery">
@@ -85,10 +92,14 @@
       </div>
       <h2>動画</h2>
       <div class="videos">
-        <!-- YouTubeまたはVimeo動画の埋め込み -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eqiaXKcZ8as" frameborder="0" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/km2S0DWVj0c" frameborder="0" allowfullscreen></iframe>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/eqiaXKcZ8as" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/km2S0DWVj0c" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
+      
     </section>
   </main>
   <!-- ボトムナビゲーション -->
