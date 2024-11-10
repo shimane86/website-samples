@@ -41,6 +41,7 @@ body {
   flex: 1;
   padding: 100px 20px 60px; /* ヘッダーとフッターの高さ分の余白を調整 */
   text-align: center;
+  margin-top: 20px;
 }
 
 .container2 {
@@ -94,6 +95,10 @@ h2 {
 
 .program li {
   margin: 0.2rem 0;
+}
+
+.media-gallery {
+  margin-top: 60px;
 }
 
 /* フッター */

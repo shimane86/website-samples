@@ -3,6 +3,7 @@
     /* 水平方向中央寄せ */
     display: flex;
     justify-content: center;
+    margin-top: 20px;
   }
   /* カルーセル内容 */
   .contains {
@@ -14,6 +15,7 @@
     position: relative;
     padding: 0;
     list-style: none;
+    margin-top: 20px;
   }
   /* スライド切り換え用ラジオボタンは常に非表示 */
   .slide_select {
