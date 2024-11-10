@@ -5,26 +5,44 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #f0f8ff;
   color: #333;
 }
 
-.container {
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-  padding: 20px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-
+/* ヘッダー */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
+
+.banner-img {
+  height: 40px; /* バナー画像の高さを調整 */
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* メインコンテンツ */
+.container {
+  flex: 1;
+  padding: 100px 20px 60px; /* ヘッダーとフッターの高さ分の余白を調整 */
+  text-align: center;
+}
+
 .container2 {
   position: relative;
   width: 80%;
@@ -36,40 +54,22 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   background-image: url('./images/suisougaku.png'), url('./images/suisougaku_otona.png');
   background-repeat: no-repeat, no-repeat;
-  background-position: left 20px bottom 200px, right 20px bottom 200px; /* 下に20px移動 */
-  background-size: 30%, 25%; /* 画像サイズを調整 */
+  background-position: left bottom 20px, right bottom 20px;
+  background-size: 30%, 25%;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   color: #4caf50;
   margin-bottom: 1rem;
   font-weight: bold;
 }
+
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   color: #4caf50;
   margin-bottom: 0.5rem;
 }
-
-/* スマホ向けの設定（幅768px以下の場合に画像を非表示にする） */
-@media (max-width: 768px) {
-  .container {
-    background-image: none; /* 背景画像を非表示 */
-  }
-  h1 {
-    font-size: 2.0rem;
-    color: #4caf50;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-  h2 {
-    font-size: 1.0rem;
-    color: #4caf50;
-    margin-bottom: 0.5rem;
-  }
-}
-
 
 .details, .program {
   margin-bottom: 1rem;
@@ -80,23 +80,53 @@ h2 {
   margin: 0.5rem 0;
 }
 
-.program h2 {
-  font-size: 1.5rem;
-  color: #4caf50;
-  margin-bottom: 0.5rem;
+.admission {
+  font-size: 1.3rem;
+  color: #ff6347;
+  font-weight: bold;
 }
 
 .program ul {
-  list-style: none;
+  list-style: none; /* リストの箇条書きマークを非表示 */
   padding: 0;
+  margin: 0;
 }
 
 .program li {
   margin: 0.2rem 0;
 }
 
-.admission {
-  font-size: 1.3rem;
-  color: #ff6347;
-  font-weight: bold;
+/* フッター */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.nav-item i {
+  font-size: 20px; /* アイコンのサイズ */
+  margin-bottom: 4px;
+}
+
+.nav-item.active {
+  color: #007bff; /* アクティブな項目の色 */
+}
+
+.nav-item.active i {
+  color: #007bff;
 }
